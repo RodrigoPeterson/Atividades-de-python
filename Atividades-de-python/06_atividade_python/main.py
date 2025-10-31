@@ -16,19 +16,17 @@ try:
     
     dicionario = {}
 
-    nome = input("Digite o seu nome: ").strip().title()
-    email = input("Digite o seu e-mail: ").strip().lower()
-    telefone = input("Digite o se telefone: ").strip()
-    cpf = input("Digite o seu CPF: ").strip()
-    genero = input("Digite o seu genêro: ").strip().capitalize()
 
-    dicionario["nome"] = nome
-    dicionario["email"] = email
-    dicionario["telefone"] = telefone
-    dicionario["cpf"] = cpf
-    dicionario["genero"] = genero
+    dicionario['nome'] = input("Digite o seu nome: ").strip().title()
+    dicionario['email'] = input("Digite o seu e-mail: ").strip().lower()
+    dicionario['telefone'] = input("Digite o se telefone: ").strip()
+    dicionario['cpf'] = input("Digite o seu CPF: ").strip()
+    dicionario['genero'] = input("Digite o seu genêro: ").strip().capitalize()
 
-    print(dicionario)
+    print("\nDados do usuário: \n")
+
+    for chave in dicionario:
+        print(f"{chave.capitalize()}: {dicionario[chave]}")
 
 
 except Exception as e:
