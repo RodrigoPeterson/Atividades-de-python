@@ -13,22 +13,23 @@ Após isso, o programa deve armazenar esses dados em um dicionário e exibir os 
 """
 
 try:
-    dicionario = {
-        'nome': "nome", 
-        'email': "email", 
-        'telefone': "telefone", 
-        'cpf': "cpf", 
-        'genero': "genero"
-        }
+    
+    dicionario = {}
 
     nome = input("Digite o seu nome: ").strip().title()
     email = input("Digite o seu e-mail: ").strip().lower()
     telefone = input("Digite o se telefone: ").strip()
     cpf = input("Digite o seu CPF: ").strip()
-    genero = input("Digite o seu genêro: ").strip()
+    genero = input("Digite o seu genêro: ").strip().capitalize()
 
-    
+    dicionario["nome"] = nome
+    dicionario["email"] = email
+    dicionario["telefone"] = telefone
+    dicionario["cpf"] = cpf
+    dicionario["genero"] = genero
+
+    print(dicionario)
 
 
 except Exception as e:
-    print("Algo deu errado, tente novamente {e}")
+    print(f"Algo deu errado, tente novamente {e}")
